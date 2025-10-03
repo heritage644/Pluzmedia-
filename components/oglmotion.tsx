@@ -298,7 +298,7 @@ void main() {
               
             </div>
             <div className='items-center relative top-40  flex justify-center'>
-                 <h1 className='text-white pr-1'>Lets help you </h1>  {" "} <PropsRotateText/>
+                 <h1 className='text-white pr-2 text-[20px] md:text-[40px] font-bold'>Lets help you </h1>  {" "} <PropsRotateText/>
               </div>
                
         </div>

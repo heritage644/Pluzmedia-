@@ -5,8 +5,8 @@ export default function PropsRotateText(){
     return(
         <>
         <RotatingText
-  texts={['Market', 'Publish', 'control', 'Establish' ,'Grow', 'magnify']}
-  mainClassName="px-2 sm:px-2 md:px-3 bg-white text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+  texts={['Market', 'Publish', 'Control', 'Establish' ,'Grow', 'Magnify']}
+  mainClassName="px-2 sm:px-2 md:px-3 font-bold bg-white text-[20px] text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
   staggerFrom={"last"}
   initial={{ y: "100%" }}
   animate={{ y: 0 }}
