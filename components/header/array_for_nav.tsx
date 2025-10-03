@@ -7,8 +7,9 @@ const Lap = () => {
       bgColor: "#f5f5f5",
       textColor: "#170D27",
       links: [
-        { label: "Company", ariaLabel: "About Company" },
-        { label: "Careers", ariaLabel: "About Careers" }
+        { label: "Company", ariaLabel: "About Company", href:"/case-study" },
+        { label: "Careers", ariaLabel: "About Careers",href:"/case-study" },
+       
       ]
     },
     {
@@ -16,8 +17,9 @@ const Lap = () => {
        bgColor: "#f5f5f5",
       textColor: "#170D27",
       links: [
-        { label: "Featured", ariaLabel: "Featured Projects" },
-        { label: "Case Studies", ariaLabel: "Project Case Studies" }
+        { label: "Featured", ariaLabel: "Featured Projects" ,href:"/case-study"},
+        { label: "Case Studies", ariaLabel: "Project Case Studies" ,href:"/case-study"},
+        
       ]
     },
     {
@@ -25,9 +27,10 @@ const Lap = () => {
       bgColor: "#f5f5f5", 
       textColor: "#170D27",
       links: [
-        { label: "Email", ariaLabel: "Email us" },
-        { label: "Twitter", ariaLabel: "Twitter" },
-        { label: "LinkedIn", ariaLabel: "LinkedIn" }
+        { label: "Email", ariaLabel: "Email us",href:"/case-study" },
+        { label: "Twitter", ariaLabel: "Twitter" ,href:"/case-study"},
+        { label: "LinkedIn", ariaLabel: "LinkedIn",href:"/case-study" },
+       
       ]
     }
   ];
