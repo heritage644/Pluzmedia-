@@ -23,7 +23,7 @@ export default function DashBoard(){
 
         </div>
        </header>
-       <section className="text-black flex items-center flex-col h-screen w-full items-center mt-10 ">
+       <section className="text-black bg-white flex items-center flex-col h-screen w-full items-center mt-10 ">
         <h1 className="text-[35px] sm:text-[55px] text-center">Allow <strong className="text-red-300">pluz</strong> make your marketing simpler for you today</h1>
 
      <div className="flex  flex-col gap-5  xl:mt-20  items-center  sm:flex-row">
