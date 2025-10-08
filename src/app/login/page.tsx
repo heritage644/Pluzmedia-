@@ -7,8 +7,8 @@ export default function LoginPage(){
  const newUser = "Emmanuel"
     const study = "Web Development"
     const Username = "bigHeritage"
-function clicker(){
-    
+function clicker(e:any){
+    e.preventDefault()
     router.push(`/login/${newUser}?study=${study}&Username=${Username}`)
 }
 
@@ -25,7 +25,7 @@ function clicker(){
                 </div>
 
               <div className="backdrop-blur-xl bg-transparent h-screen w-full flex items-center justify-center">
-                  <form action="" className="flex z-100 rounded-lg bg-red-300 flex-col items-center w-200 h-130 pt-20 gap-10 ">
+                  <form action="" className="flex z-100 rounded-lg bg-red-300 flex-col items-center xl:px-50 sm:px-20 w-fit px-10 h-130 pt-20 gap-10 ">
                   <div className="flex flex-col">
                       <label htmlFor="" className="text-[20px]">E-mail</label>
                     <input type="email" className="bg-white focus:outline-none pl-2 rounded-full"  />

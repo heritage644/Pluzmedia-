@@ -168,6 +168,13 @@ router.push('/login')
 router.back()
 
   }
+
+      function clicker(e:any){
+        e.preventDefault()
+        const newUser = 'BigHeritage'
+       router.push('/login')
+    }
+
   return (
     <header
       className={`card-nav-container absolute left-1/2 -translate-x-1/2 w-[90%] max-w-[800px] z-[99] top-[1.2em] md:top-[2em] ${className}`}
@@ -237,7 +244,7 @@ router.back()
                 {item.links?.map((lnk, i) => (
                   <a
                     key={`${lnk.label}-${i}`}
-                    className="nav-card-link inline-flex items-center gap-[6px] hover:text-red-800 no-underline cursor-pointer transition-opacity duration-300 hover:opacity-75 text-[15px] md:text-[16px]"
+                    className="nav-card-link inline-flex  items-center gap-[6px] hover:text-red-800 no-underline cursor-pointer transition-opacity duration-300 hover:opacity-75 text-[15px] md:text-[16px]"
                     href={lnk.href}
                     aria-label={lnk.ariaLabel}
                   >
@@ -248,6 +255,7 @@ router.back()
               </div>
             </div>
           ))}
+        <button className="sm:hidden bg-black text-white hover:text-red-300 hover:bg-white hover:border"onClick={clicker}>{isDashboard ? "Log out" :"log in"} </button>
         </div>
       </nav>
     </header>

@@ -288,7 +288,7 @@ void main() {
     mouseInteractionRadius
   ]);
 
-  return <div ref={containerRef} className="w-full h-full relative flex items-center justify-center flex-col overflow-hidden [&_canvas]:block" >
+  return <div ref={containerRef} className="w-full h-full fixed-local relative flex items-center justify-center flex-col overflow-hidden [&_canvas]:block" >
 
     <section className='   z-30 '>
         <div>

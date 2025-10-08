@@ -4,11 +4,13 @@ import { useRouter } from "next/navigation"
 
 export default function Signup (){
     const router = useRouter()
-    function clicker(){
+    function clicker(e:any){
+        e.preventDefault()
         const newUser = 'BigHeritage'
        router.push(`/login/${newUser}`)
     }
 
+    
     return (
         <>
               <section>
@@ -21,7 +23,7 @@ export default function Signup (){
                 </div>
                <div className="z-100 w-full items-center flex justify-center backdrop-blur-xl inset-0  h-full ">
                  
-                <form action="" className="flex bg-red-300 flex-col items-center w-200 h-130 pt-20 gap-10 ">
+                <form action="" className="flex bg-red-300 flex-col items-center  xl:px-50 sm:px-20 w-fit px-10 h-130 pt-20 gap-10 ">
                   <div className="flex flex-col">
                       <label htmlFor="" className="text-[20px]">Username</label>
                     <input type="text" className="bg-white focus:outline-none rounded-full"  />
