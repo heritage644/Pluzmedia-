@@ -1,10 +1,13 @@
 'use client'
-
+import Link from "next/link"
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import Split from './headertext';
 import { gsap } from 'gsap';
+import { usePathname, useRouter } from "next/navigation"
+
 // use your own icon import if react-icons is not available
 import { GoArrowUpRight } from 'react-icons/go';
+import Home from "@/app/page";
 
 type CardNavLink = {
   label: string;
@@ -45,7 +48,8 @@ const CardNav: React.FC<CardNavProps> = ({
   const navRef = useRef<HTMLDivElement | null>(null);
   const cardsRef = useRef<HTMLDivElement[]>([]);
   const tlRef = useRef<gsap.core.Timeline | null>(null);
-
+const pathname = usePathname()
+const router = useRouter()
   const calculateHeight = () => {
     const navEl = navRef.current;
     if (!navEl) return 260;
@@ -155,7 +159,15 @@ const CardNav: React.FC<CardNavProps> = ({
   const setCardRef = (i: number) => (el: HTMLDivElement | null) => {
     if (el) cardsRef.current[i] = el;
   };
+  const isDashboard = pathname.includes('/login')
+  function isDashboarded (){
+router.push('/login')
 
+  }
+    function ishome (){
+router.back()
+
+  }
   return (
     <header
       className={`card-nav-container absolute left-1/2 -translate-x-1/2 w-[90%] max-w-[800px] z-[99] top-[1.2em] md:top-[2em] ${className}`}
@@ -190,13 +202,19 @@ const CardNav: React.FC<CardNavProps> = ({
             <Split/>
           </div>
 
-          <button
-            type="button"
-            className="card-nav-cta-button pt-2 hidden md:inline-flex border-0 rounded-[calc(0.75rem-0.2rem)] px-4 h-full font-medium cursor-pointer transition-colors duration-300"
+        {isDashboard ? <button
+          onClick={ishome}
+              className="card-nav-cta-button pt-2 hidden md:inline-flex border-0 rounded-[calc(0.75rem-0.2rem)] px-4 h-full font-medium cursor-pointer transition-colors duration-300"
+            style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
+          >
+            Log out
+          </button>  : <button
+          onClick={isDashboarded}
+              className="card-nav-cta-button pt-2 hidden md:inline-flex border-0 rounded-[calc(0.75rem-0.2rem)] px-4 h-full font-medium cursor-pointer transition-colors duration-300"
             style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
           >
             Get Started
-          </button>
+          </button>}
         </div>
 
         <div
