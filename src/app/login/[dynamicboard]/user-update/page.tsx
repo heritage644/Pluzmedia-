@@ -2,7 +2,7 @@
 import { MdPerson } from "react-icons/md"
 import { useParams } from "next/navigation"
 import Lap from "../../../../../components/header/array_for_nav"
-export default function(){
+export default function UserUpdate(){
     const params = useParams()
   const newUser= params.dynamicboard
     return(
