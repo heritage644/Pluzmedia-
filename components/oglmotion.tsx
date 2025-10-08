@@ -1,6 +1,6 @@
 'use client'
 import SplitTexts from './herosection/herotext';
-
+import Footer from './footer/footer';
 import Lap from './header/array_for_nav';
 import { useRef, useEffect } from 'react';
 import { Renderer, Program, Triangle, Mesh } from 'ogl';
@@ -288,7 +288,7 @@ void main() {
     mouseInteractionRadius
   ]);
 
-  return <div ref={containerRef} className="w-full h-full fixed-local relative flex items-center justify-center flex-col overflow-hidden [&_canvas]:block" >
+  return <div ref={containerRef} className="w-full h-full fixed inset-0 bg-black touch-none select-none flex items-center justify-center flex-col overflow-x-hidden [&_canvas]:block" >
 
     <section className='   z-30 '>
         <div>
@@ -305,6 +305,9 @@ void main() {
        
  
         </section>
+       <div className='w-full sticky top-full'>
+         <Footer/>
+       </div>
   </div>;
 };
 

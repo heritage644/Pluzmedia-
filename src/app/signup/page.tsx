@@ -14,7 +14,7 @@ export default function Signup (){
     return (
         <>
               <section>
-            <div className="bg-white flex flex-col items-center justify-center h-screen overflow-y-hidden">
+            <div className="bg-white flex flex-col items-center text-black justify-center h-screen overflow-y-hidden">
                  <div className="absolute " >
                     <h1 className="text-black text-[300px] relative ">
                         PLUZ MEDIA
@@ -23,7 +23,7 @@ export default function Signup (){
                 </div>
                <div className="z-100 w-full items-center flex justify-center backdrop-blur-xl inset-0  h-full ">
                  
-                <form action="" className="flex bg-red-300 flex-col items-center  xl:px-50 sm:px-20 w-fit px-10 h-130 pt-20 gap-10 ">
+                <form action="" className="flex bg-red-300 flex-col items-center  xl:px-50 sm:px-20 w-fit px-20 h-130 pt-20 gap-10 ">
                   <div className="flex flex-col">
                       <label htmlFor="" className="text-[20px]">Username</label>
                     <input type="text" className="bg-white focus:outline-none rounded-full"  />

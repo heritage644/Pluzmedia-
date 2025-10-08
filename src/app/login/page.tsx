@@ -16,7 +16,7 @@ function clicker(e:any){
         <>
         <section>
              
-            <div className="bg-white flex flex-col items-center justify-center h-screen ">
+            <div className="bg-white flex flex-col items-center justify-center h-screen text-black ">
                <div className="absolute " >
                     <h1 className="text-black text-[300px] relative ">
                         PLUZ MEDIA
@@ -25,7 +25,7 @@ function clicker(e:any){
                 </div>
 
               <div className="backdrop-blur-xl bg-transparent h-screen w-full flex items-center justify-center">
-                  <form action="" className="flex z-100 rounded-lg bg-red-300 flex-col items-center xl:px-50 sm:px-20 w-fit px-10 h-130 pt-20 gap-10 ">
+                  <form action="" className="flex z-100 rounded-lg bg-red-300 flex-col items-center xl:px-50 sm:px-20 w-fit px-20 h-130 pt-20 gap-10 ">
                   <div className="flex flex-col">
                       <label htmlFor="" className="text-[20px]">E-mail</label>
                     <input type="email" className="bg-white focus:outline-none pl-2 rounded-full"  />

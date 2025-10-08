@@ -45,7 +45,7 @@ export default function AfterHero(){
     
     return(
         <>
-        <section className="text-white w-full flex justify-center items-center "id="lorem">
+        <section className="text-white w-full h-screen  flex justify-center flex-col hidden items-center "id="lorem">
             <h1 className="w-100 text-center lg:text-[25px] lg:w-170 classes ">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 

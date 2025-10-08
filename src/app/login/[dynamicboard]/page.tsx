@@ -11,13 +11,13 @@ export default function DashBoard(){
     const Username = searchParams.get("Username")
     return(
         <>
-       <main className="overflow-x-hidden">
+       <main className="overflow-hidden text-black h-full ">
         <header className="bg-black h-30 flex items-center  pl-10 sticky  top-0 shadow-sm shadow-black ">
         <Lap/>
          <div >
             <h1 className="lg:text-[20px] xl:text-[20px] hidden sm:flex text-white font-bold">
-                Welcome <span className="text-red-300">{user}</span>
-            
+                Welcome  <strong className="text-red-300"> {" "} {user} </strong>
+              
             </h1>
            
 
@@ -58,22 +58,15 @@ export default function DashBoard(){
       </div>
 
       </div>
-      <div className="mt-20 bg-red-300 w-full  flex items-start sm:items-center flex-col ">
-        <h1 className="text-[30px] font-bold pl-3  lg:pl-0">More about us</h1>
-         <h1 className=" text-start  lg:text-[20px] w-70 lg:w-full pl-3 ">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
-                in culpa qui officia deserunt mollit anim id est laborum.
-              borum.
-            
-            </h1>
-      </div>
+     
 
        </section>
      
-
+<div className="bg-white sticky mb-0 bg-green-300 border-t border-gray-300">
+     <Footer/>
+</div>
        </main>
-         <Footer/>
+        
         </>
     )
 }
