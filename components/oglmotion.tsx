@@ -288,7 +288,7 @@ void main() {
     mouseInteractionRadius
   ]);
 
-  return <div ref={containerRef} className="w-full h-full fixed inset-0 bg-black touch-none select-none flex items-center justify-center flex-col overflow-x-hidden [&_canvas]:block" >
+  return <div ref={containerRef} className="w-full flex-grow h-full fixed inset-0 bg-black touch-none select-none flex items-center justify-center flex-col overflow-x-hidden [&_canvas]:block" >
 
     <section className='   z-30 '>
         <div>
@@ -305,8 +305,10 @@ void main() {
        
  
         </section>
-       <div className='w-full sticky top-full'>
-         <Footer/>
+       <div className='w-full sticky top-full '>
+       <div className='mb-0'>
+          <Footer/>
+       </div>
        </div>
   </div>;
 };

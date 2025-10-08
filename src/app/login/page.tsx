@@ -4,12 +4,12 @@ import { useRouter } from "next/navigation"
 export default function LoginPage(){
     const router = useRouter()
 
- const newUser = "Emmanuel"
+ const newUser = "John"
     const study = "Web Development"
     const Username = "bigHeritage"
 function clicker(e:any){
     e.preventDefault()
-    router.push(`/login/${newUser}?study=${study}&Username=${Username}`)
+    router.push(`/login/${newUser}`)
 }
 
     return(

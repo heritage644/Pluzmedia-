@@ -174,10 +174,17 @@ router.back()
         const newUser = 'BigHeritage'
        router.push('/login')
     }
+  
+       function clickers(e:any){
+        e.preventDefault()
+        const newUser = 'BigHeritage'
+       router.push(`/login/${newUser}/user-update`)
+    }
+
 
   return (
     <header
-      className={`card-nav-container absolute left-1/2 -translate-x-1/2 w-[90%] max-w-[800px] z-[99] top-[1.2em] md:top-[2em] ${className}`}
+      className={`  card-nav-container absolute left-1/2 -translate-x-1/2 w-[90%] max-w-[800px] z-[99] top-[1.2em] md:top-[2em] ${className}`}
     >
       <nav
         ref={navRef}
@@ -256,6 +263,7 @@ router.back()
             </div>
           ))}
         <button className="sm:hidden bg-black text-white hover:text-red-300 hover:bg-white hover:border"onClick={clicker}>{isDashboard ? "Log out" :"log in"} </button>
+        {isDashboard ?  <button className="sm:hidden bg-black text-white hover:text-red-300 hover:bg-white hover:border"onClick={clickers}>Profile </button>:null}
         </div>
       </nav>
     </header>
