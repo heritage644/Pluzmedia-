@@ -3,7 +3,7 @@ import RippleGrid from "../oglmotion"
 <div style={{position: 'relative', height: '500px', overflow: 'hidden'}}>
   <RippleGrid
     enableRainbow={false}
-    gridColor="#ff0000"
+    gridColor="#0004ffff"
     rippleIntensity={0.05}
     gridSize={10}
     gridThickness={15}

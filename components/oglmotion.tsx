@@ -5,7 +5,7 @@ import Lap from './header/array_for_nav';
 import { useRef, useEffect } from 'react';
 import { Renderer, Program, Triangle, Mesh } from 'ogl';
 import PropsRotateText from './herosection/props_rotating_text';
-
+import AfterHero from './after_hero_section.tsx/after_hero_content';
 type Props = {
   enableRainbow?: boolean;
   gridColor?: string;
@@ -23,7 +23,7 @@ type Props = {
 
 const RippleGrid: React.FC<Props> = ({
   enableRainbow = false,
-  gridColor = '#ff0000',
+  gridColor = '#4c00ffff',
   rippleIntensity = 0.005,
   gridSize = 15.0,
   gridThickness = 15.0,
@@ -204,7 +204,7 @@ void main() {
 
     const handleMouseEnter = () => {
       if (!mouseInteraction) return;
-      mouseInfluenceRef.current = 1.0;
+      mouseInfluenceRef.current = 2.0;
     };
 
     const handleMouseLeave = () => {
@@ -288,29 +288,31 @@ void main() {
     mouseInteractionRadius
   ]);
 
-  return <div ref={containerRef} className="w-full flex-grow h-full fixed inset-0 bg-black touch-none select-none flex items-center justify-center flex-col overflow-x-hidden [&_canvas]:block" >
-
-    <section className='   z-30 '>
-        <div>
+  return <div ref={containerRef} className="w-full  min-h-screen  bg-black select-none
+   flex  flex-col overflow-x-hidden 
+   [&_canvas]:block" >
+    <section className='z-30 '>
+        <div className='flrx flex-col items-center'>
             <Lap/>
-            <div className=' flex relative top-40 '>
+            <div className=' flex relative top-40 items-center justify-center '>
                 <SplitTexts/>
-              
             </div>
             <div className='items-center relative top-40  flex justify-center'>
-                 <h1 className='text-white pr-2 text-[20px] md:text-[40px] font-bold'>Lets help you </h1>  {" "} <PropsRotateText/>
+                 <h1 className='text-white pr-2 text-[20px] md:text-[40px] font-bold'>Lets help you </h1> 
+                  {" "} <PropsRotateText/>
               </div>
-               
+              <div>
+                <AfterHero/>
+              </div>
+
         </div>
-       
- 
         </section>
-       <div className='w-full sticky top-full '>
-       <div className='mb-0'>
-          <Footer/>
-       </div>
-       </div>
+        
+      
+         
+      
   </div>;
 };
+
 
 export default RippleGrid;

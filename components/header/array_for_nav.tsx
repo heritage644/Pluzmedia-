@@ -7,7 +7,7 @@ const Lap = () => {
       bgColor: "#f5f5f5",
       textColor: "#170D27",
       links: [
-        { label: "Company", ariaLabel: "About Company", href:"/case-study" },
+        { label: "Whatsapp", ariaLabel: "About Company", href:`http://wa.me/2349058480421? hello, sir?`},
         { label: "Careers", ariaLabel: "About Careers",href:"/case-study" },
        
       ]

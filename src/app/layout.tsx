@@ -1,6 +1,7 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
-
+import SessionProvider from "../../components/sessionprovider";
 
 export const metadata: Metadata = {
   title: "PLuz Media",
@@ -14,10 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-      
-      >
-        {children}
+      <body className="overflow-x-hidden">
+        {/* SessionProvider is a client component that wraps the whole app */}
+        <SessionProvider>{children}</SessionProvider>
       </body>
     </html>
   );

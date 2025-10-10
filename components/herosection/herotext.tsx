@@ -26,9 +26,9 @@ ease:'power3.out',
 })
     return(
         <>
-        <section className="items-center flex justify-center mt-50 ">
-            <h1 className="text-white font-bold text-[50px] md:text-[70px] lg:text-[80px] title">Pluz Media</h1>
+        <section className="items-center flex justify-center mt-0 ">
+            <h1 className="text-white font-bold text-[50px] md:text-[70px] lg:text-[80px] title">{`PLUZ MEDIA`}</h1>
         </section>
         </>
     )
-}
+}       

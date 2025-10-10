@@ -6,15 +6,14 @@ import { useRouter } from "next/navigation"
 import Lap from "../../../../components/header/array_for_nav"
 import { useParams, useSearchParams } from "next/navigation"
 import { GoArrowUpRight } from 'react-icons/go';
+import { supabase } from "@/supabase-client"
 export default function DashBoard(){
-    const params = useParams()
- 
-    const newUser= params.dynamicboard
+   
    
 const router = useRouter()
     function clicked(e:any){
  e.preventDefault()
-    router.push(`/login/${newUser}/user-update`)
+ 
     }
     return(
         <>
@@ -23,7 +22,7 @@ const router = useRouter()
         <Lap/>
          <div >
             <h1 className="lg:text-[20px] xl:text-[20px] hidden sm:flex text-white font-bold">
-                Welcome  <strong className="text-red-300"> {" "} {newUser} </strong>
+                Welcome  <strong className="text-red-300"> {" "}  </strong>
             </h1>
         </div>
         <div>

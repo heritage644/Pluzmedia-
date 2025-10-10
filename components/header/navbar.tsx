@@ -4,7 +4,7 @@ import React, { useLayoutEffect, useRef, useState } from 'react';
 import Split from './headertext';
 import { gsap } from 'gsap';
 import { usePathname, useRouter } from "next/navigation"
-
+import { motion } from "framer-motion"
 // use your own icon import if react-icons is not available
 import { GoArrowUpRight } from 'react-icons/go';
 import Home from "@/app/page";
@@ -184,7 +184,7 @@ router.back()
 
   return (
     <header
-      className={`  card-nav-container absolute left-1/2 -translate-x-1/2 w-[90%] max-w-[800px] z-[99] top-[1.2em] md:top-[2em] ${className}`}
+      className={`  card-nav-container absolute left-1/2 -translate-x-1/2 w-[90%] max-w-[800px] z-[1000] top-[1.2em] md:top-[2em] ${className}`}
     >
       <nav
         ref={navRef}
@@ -216,19 +216,25 @@ router.back()
             <Split/>
           </div>
 
-        {isDashboard ? <button
+        {isDashboard ? < motion.button
+         whileHover={{scale:1.1}}
+               whileTap={{scale:0.9}}
+               transition={{type:"spring", stiffness:400, damping:17 }}
           onClick={ishome}
               className="card-nav-cta-button pt-2 hidden md:inline-flex border-0 rounded-[calc(0.75rem-0.2rem)] px-4 h-full font-medium cursor-pointer transition-colors duration-300"
             style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
           >
             Log out
-          </button>  : <button
+          </motion.button>  : <motion.button
+           whileHover={{scale:1.1}}
+               whileTap={{scale:0.9}}
+               transition={{type:"spring", stiffness:400, damping:17 }}
           onClick={isDashboarded}
               className="card-nav-cta-button pt-2 hidden md:inline-flex border-0 rounded-[calc(0.75rem-0.2rem)] px-4 h-full font-medium cursor-pointer transition-colors duration-300"
             style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
           >
             Get Started
-          </button>}
+          </motion.button>}
         </div>
 
         <div
