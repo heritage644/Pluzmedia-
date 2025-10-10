@@ -24,7 +24,7 @@ export default function Bouncy (){
         }),
       
         tl.to(".redbox",{
-            x:157,
+            x:155,
             rotate:360,
             duration:3,
             ease:'back.inOut',
@@ -32,15 +32,30 @@ export default function Bouncy (){
 
         })
           tl.to(".redbox",{
-            x:159,
-            rotation:10,
+            rotate:13,
             duration:3,
-            ease:'bounce.inOut',
+            ease:'back.inOut',
            
 
         })
 
-         
+            tl.fromTo(".redbox",{
+                rotate:13,
+            repeat:-1,
+            yoyo:true,
+            duration:5,
+            ease:'power3.in',  
+
+        },{
+            rotate:2,
+            yoyo:true,
+            repeat:-1,
+            duration:4,
+            ease:'power3.inOut'
+
+
+        })
+        
      
     })
     return(

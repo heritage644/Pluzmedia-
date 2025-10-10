@@ -2,7 +2,7 @@
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { FormEvent, useState, useEffect } from "react"
-import { supabase } from "@/supabase-client"
+import { getSupabaseClient } from "@/supabase-client";
 import { motion } from "framer-motion"
 export default function Signup (){
 
@@ -13,7 +13,7 @@ export default function Signup (){
     const [chechSent, setCheckSent] = useState(false)
     const [loading, setLoading] = useState(false)
     const router = useRouter()
-
+   const supabase = getSupabaseClient();
 
     const handleSubmit = async (e:FormEvent<HTMLFormElement>) => {
 e.preventDefault()
