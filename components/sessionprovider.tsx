@@ -9,9 +9,12 @@ export default function SessionProvider({ children }: { children: React.ReactNod
   const [session, setSession] = useState<any>(null);
 
   useEffect(() => {
-    const supabase = getSupabaseClient();
-    if (!supabase) return; // Prevent crash on build
 
+   const supabase = getSupabaseClient();
+   if(!supabase){
+    console.log("supabase not available yet")
+    return;
+   }
     // Get initial session
     const init = async () => {
       const { data } = await supabase.auth.getSession();

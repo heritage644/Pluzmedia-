@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation"
 import { FormEvent, useState, useEffect } from "react"
 import { getSupabaseClient } from "@/supabase-client";
 import { motion } from "framer-motion"
+
 export default function Signup (){
 
     const [isSLoggedIn, setIsLoggedIn] = useState(false)
@@ -13,10 +14,16 @@ export default function Signup (){
     const [chechSent, setCheckSent] = useState(false)
     const [loading, setLoading] = useState(false)
     const router = useRouter()
-   const supabase = getSupabaseClient();
+  
 
     const handleSubmit = async (e:FormEvent<HTMLFormElement>) => {
 e.preventDefault()
+const supabase = getSupabaseClient();
+
+   if(!supabase){
+    console.log("supabase not available yet")
+    return;
+   }
 
     const {error, data:authData} = await supabase.auth.signInWithPassword({
         email,

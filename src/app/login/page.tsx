@@ -13,12 +13,16 @@ export default function LoginPage(){
     const [email, setEmail] = useState("")
     const [chechSent, setCheckSent] = useState(false)
 
-   const supabase = getSupabaseClient();
+
 
     const handleSubmit = async (e:FormEvent<HTMLFormElement>) => {
 e.preventDefault()
 
-
+   const supabase = getSupabaseClient();
+   if(!supabase){
+    console.log("supabase not available yet")
+    return;
+   }
     const {error, data :authData} = await supabase.auth.signUp({email, password})
     
 
