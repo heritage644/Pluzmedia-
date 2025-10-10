@@ -1,5 +1,5 @@
 'use client'
-import Link from "next/link"
+
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import Split from './headertext';
 import { gsap } from 'gsap';
@@ -7,7 +7,7 @@ import { usePathname, useRouter } from "next/navigation"
 import { motion } from "framer-motion"
 // use your own icon import if react-icons is not available
 import { GoArrowUpRight } from 'react-icons/go';
-import Home from "@/app/page";
+
 
 type CardNavLink = {
   label: string;

@@ -4,9 +4,7 @@ import Link from "next/link"
 import Footer from "../../../../components/footer/footer"
 import { useRouter } from "next/navigation"
 import Lap from "../../../../components/header/array_for_nav"
-import { useParams, useSearchParams } from "next/navigation"
 import { GoArrowUpRight } from 'react-icons/go';
-import { supabase } from "@/supabase-client"
 export default function DashBoard(){
    
    

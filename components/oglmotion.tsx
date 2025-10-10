@@ -1,6 +1,5 @@
 'use client'
 import SplitTexts from './herosection/herotext';
-import Footer from './footer/footer';
 import Lap from './header/array_for_nav';
 import { useRef, useEffect } from 'react';
 import { Renderer, Program, Triangle, Mesh } from 'ogl';

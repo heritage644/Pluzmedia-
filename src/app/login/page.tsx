@@ -4,7 +4,6 @@ import { motion } from "framer-motion"
 import { FormEvent, useState } from "react"
 import { supabase } from "@/supabase-client"
 import { useRouter } from "next/navigation"
-import { data } from "framer-motion/client"
 export default function LoginPage(){
     const router = useRouter()
     const [emailSent, setEmailSent] = useState("")

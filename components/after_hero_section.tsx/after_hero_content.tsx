@@ -8,15 +8,9 @@
 */
 
 import gsap from "gsap"
-
 import { SplitText } from "gsap/SplitText"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-
 import { useGSAP } from "@gsap/react";
-
-
 export default function AfterHero(){
-
     useGSAP(()=>{
         const titleSplit = SplitText.create('.classes',{type: 'words'})
 
